@@ -1,0 +1,145 @@
+header img {
+    float: left;
+}
+img {
+    margin-right: 1em;
+    height: 100px;
+}
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+nav {
+    text-align: center;
+}
+nav li {
+    font-size: 20px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    font-style: bold;
+}
+header {
+    background-color: #6CEBC9;
+    
+}
+header h1 {
+    text-align: center;
+}
+footer {
+    clear: left;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+footer h5 {
+    display: block;
+    margin-top: 200px;
+    font-size: x-large;
+}
+.home {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    margin-top: 60px;
+    padding: 10px;
+}
+.label {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    border: solid;
+    background-color: white;
+}
+
+#bigp {
+    padding-top: 0px;
+    padding-right: 245px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 100px;
+    width: 50px;
+    font-size: 100px;
+}
+#toptext {
+    border: solid;
+    margin-left: -210px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+    height: 170;
+    text-align: right;
+}
+
+h1.pri {
+    border-top: solid;
+    border-bottom: solid;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.flex {
+    display: flex;
+}
+.topright {
+    margin-right: 3em;
+}
+
+.fromaddy {
+    display: flex;
+}
+.sender {
+    margin-left: 0.25em;
+}
+
+.toaddy {
+    display: flex;
+    border-bottom: solid;
+}
+.reciever {
+    margin-left: 0.25em;
+}
+.trackinglabel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ordernumber {
+    text-align: center;
+}
+.errormessage {
+    color: red;
+    background-color: black;
+}
+.homepageimages{
+    display: flex;
+}
+.footer {
+    background-color: #6CEBC9;
+    padding: 50px;
+}
+.homepagebody {
+    background-color:#0293ED;
+}
+.shippingpagebody {
+    background-color:#0293ED;
+}
+form {
+    text-align: center;
+}
+.titlequestion {
+    text-align: center;
+}
+.submitbutton {
+    margin-top: 20px;
+}
+.shippingquestion {
+    margin-top: 50px
+}
