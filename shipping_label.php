@@ -1,3 +1,4 @@
+<!--Fuzail Shahzad 2-16-2024 IT202-006 Phase 1 Assignment: HTML5 and PHP Form uf7@njit.edu-->
 <link rel="stylesheet" href="homepage.css" />
 <?php
 $first_name = filter_input(INPUT_POST, 'first_name');
@@ -54,5 +55,5 @@ if ($error_message != '') {
     </div>
     <img class="trackinglabel" src="images/tracking_label.png">
     <h3 class="ordernumber">Order Number: <?php echo $order_number?></h3>
-  <body
+  </body
 </html> 
