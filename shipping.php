@@ -8,6 +8,8 @@
         if (!isset($package_height)) { $package_height = ''; }
         if (!isset($package_width)) { $package_width = ''; }
         if (!isset($total_value)) { $total_value = ''; }
+        if (!isset($order_number)) { $order_number = ''; }
+        if (!isset($order_date)) { $order_date = ''; }
         if (!isset($error_message)) { $error_message = ''; }
     ?>
 <html>
@@ -54,6 +56,14 @@
             <label>Total Package Value:</label>
             <br>
             <input type="text" name="total_value" value="<?php echo htmlspecialchars($total_value); ?>" />
+            <br>
+            <label>Order Number:</label>
+            <br>
+            <input type="text" name="order_number" value="<?php echo htmlspecialchars($order_number); ?>" />
+            <br>
+            <label>Order Date:</label>
+            <br>
+            <input type="date" name="order_date" value="<?php echo htmlspecialchars($order_date); ?>" />
             <br>
             <input class="submitbutton" type="submit" value="Get Shipping Label" />
         </form>

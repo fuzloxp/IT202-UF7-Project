@@ -6,7 +6,7 @@ img {
     height: 100px;
 }
 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Monospace;
     margin: 20px;
 }
 nav {
@@ -21,10 +21,12 @@ nav li {
 }
 header {
     background-color: #6CEBC9;
+    font-family: Monospace;
     
 }
 header h1 {
     text-align: center;
+    font-family: Monospace;
 }
 footer {
     clear: left;
@@ -33,6 +35,7 @@ footer {
     right: 0;
     left: 0;
     margin: auto;
+    font-family: Monospace;
 }
 footer h5 {
     display: block;
@@ -64,6 +67,7 @@ footer h5 {
     height: 100px;
     width: 50px;
     font-size: 100px;
+    font-family: Monospace;
 }
 #toptext {
     border: solid;
@@ -73,6 +77,7 @@ footer h5 {
     padding-left: 0px;
     height: 170;
     text-align: right;
+    font-family: Monospace;
 }
 
 h1.pri {
@@ -83,6 +88,7 @@ h1.pri {
     margin-left: auto;
     padding-top: 15px;
     padding-bottom: 15px;
+    font-family: Monospace;
 }
 
 .flex {
@@ -94,6 +100,7 @@ h1.pri {
 
 .fromaddy {
     display: flex;
+    font-family: Monospace;
 }
 .sender {
     margin-left: 0.25em;
@@ -102,6 +109,7 @@ h1.pri {
 .toaddy {
     display: flex;
     border-bottom: solid;
+    font-family: Monospace;
 }
 .reciever {
     margin-left: 0.25em;
@@ -111,8 +119,16 @@ h1.pri {
     margin-left: auto;
     margin-right: auto;
 }
+.shippingdate {
+    display: flex;
+    font-family: Monospace;
+}
+.date {
+    margin-left: 0.25em;
+}
 .ordernumber {
     text-align: center;
+    font-family: Monospace;
 }
 .errormessage {
     color: red;
@@ -133,12 +149,14 @@ h1.pri {
 }
 form {
     text-align: center;
+    font-family: monospace;
 }
 .titlequestion {
     text-align: center;
 }
 .submitbutton {
     margin-top: 20px;
+    font-family: monospace;
 }
 .shippingquestion {
     margin-top: 50px

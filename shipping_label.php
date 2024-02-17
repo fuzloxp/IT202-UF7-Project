@@ -8,6 +8,8 @@ $state_initials = filter_input(INPUT_POST, 'state_initials');
 $zip_code = filter_input(INPUT_POST, 'zip_code');
 $package_height = filter_input(INPUT_POST, 'package_height', FILTER_VALIDATE_FLOAT);
 $package_width = filter_input(INPUT_POST, 'package_width', FILTER_VALIDATE_FLOAT);
+$order_date = filter_input(INPUT_POST, 'order_date');
+$order_number = filter_input(INPUT_POST, 'order_number');
 $total_value = filter_input(INPUT_POST, 'total_value', FILTER_VALIDATE_FLOAT);
 
 $error_message = '';
@@ -44,9 +46,13 @@ if ($error_message != '') {
     </div>
     <div class="toaddy">
       <p class="shipto">SHIP TO: </p>
-      <p class="reciever"><?php echo $first_name;?> <?php echo $last_name;?><br><?php echo $street_address?><br><?php echo $city?>, <?php echo $state_initials?> <?php echo $zip_code?></p>
+      <p class="reciever"><?php echo $first_name;?> <?php echo $last_name;?><br><?php echo $street_address?><br><?php echo $city?>, <?php echo $state_initials?><br><?php echo $zip_code?></p>
+    </div>
+    <div class="shippingdate">
+      <p class="shipd">Ship Date: </p>
+      <p class="date"><?php echo $order_date?></p>
     </div>
     <img class="trackinglabel" src="images/tracking_label.png">
-    <h3 class="ordernumber">Order Number: 9405 5118 9956 0893 8339 76</h3>
-  <body>
-</html>
+    <h3 class="ordernumber">Order Number: <?php echo $order_number?></h3>
+  <body
+</html> 
