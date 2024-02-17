@@ -46,7 +46,7 @@ if ($error_message != '') {
     </div>
     <div class="toaddy">
       <p class="shipto">SHIP TO: </p>
-      <p class="reciever"><?php echo $first_name;?> <?php echo $last_name;?><br><?php echo $street_address?><br><?php echo $city?>, <?php echo $state_initials?><br><?php echo $zip_code?></p>
+      <p class="reciever"><?php echo $first_name?> <?php echo $last_name?><br><?php echo $street_address?><br><?php echo $city?>, <?php echo $state_initials?><br><?php echo $zip_code?></p>
     </div>
     <div class="shippingdate">
       <p class="shipd">Ship Date: </p>

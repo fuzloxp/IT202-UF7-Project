@@ -23,7 +23,7 @@
         <form action ="shipping_label.php" method="post">
             <label>First Name:</label>
             <br>
-            <input value="<?php echo htmlspecialchars($first_name); ?>" />
+            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name); ?>" />
             <br>
             <label>Last Name:</label>
             <br>
