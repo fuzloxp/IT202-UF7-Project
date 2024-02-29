@@ -162,3 +162,9 @@ form {
 .shippingquestion {
     margin-top: 50px
 }
+.productpagebody {
+    background-color:#0293ED;
+}
+.producttablebruv {
+    display: flex;
+}
