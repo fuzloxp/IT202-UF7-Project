@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>My Guitar Shop</title>
+        <title>QuirkTech</title>
     </head>
     <body>
         <main>

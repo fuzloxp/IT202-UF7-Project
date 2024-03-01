@@ -1,13 +1,11 @@
 <?php
 require_once('database_njit.php');
 
-// Get category ID
 $category_id = filter_input(INPUT_GET, 'category_id', FILTER_VALIDATE_INT);
 if ($category_id == NULL || $category_id == FALSE) {
   $category_id = 1;
 }
 
-// Get name for selected category
 $queryCategory = 'SELECT * FROM QuirkTechCategories
           WHERE quirktechCategoryID = :category_id';
 $statement1 = $db->prepare($queryCategory);
@@ -17,7 +15,6 @@ $category = $statement1->fetch();
 $category_name = $category['quirktechCategoryName'];
 $statement1->closeCursor();
 
-// Get all categories
 $queryAllCategories = 'SELECT * FROM QuirkTechCategories
              ORDER BY quirktechCategoryID';
 $statement2 = $db->prepare($queryAllCategories);
@@ -25,7 +22,6 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 
-// Get products for selected category
 $queryProducts = 'SELECT * FROM QuirkTech
           WHERE quirktechCategoryID = :category_id
           ORDER BY quirktechID';
@@ -37,20 +33,17 @@ $statement3->closeCursor();
 ?>
 <!DOCTYPE html>
 <html>
-<!-- the head section -->
 <head>
   <title>My QuirkTech Shop</title>
   <link rel="stylesheet" href=product_list.css />
   <link rel="stylesheet" href="homepage.css" />
 </head>
 
-<!-- the body section -->
 <body class="productpagebody">
 <main>
 <?php include('header.php'); ?>
   <h1>Product List</h1>
   <aside>
-    <!-- display a list of categories -->
     <h2 style="font-family: Monospace">Categories</h2>
     <nav style="font-family: Monospace">
     <ul>
@@ -67,10 +60,10 @@ $statement3->closeCursor();
   </aside>
 
   <section>
-    <!-- display a table of products -->
     <h2 style="font-family: Monospace"><?php echo $category_name; ?></h2>
     <table class="producttablebruv">
       <tr style="font-family: Monospace">
+        <th>Category</th>
         <th>Code</th>
         <th>Name</th>
         <th>Description</th>
@@ -80,6 +73,13 @@ $statement3->closeCursor();
 
       <?php foreach ($products as $product) : ?>
       <tr style="font-family: Monospace">
+        <td>
+        <?php foreach ($categories as $category) : ?>
+            <?php if ($product['quirktechCategoryID']===$category['quirktechCategoryID']) 
+                echo $category['quirktechCategoryName']  
+            ?>
+        <?php endforeach; ?>
+        </td>
         <td><?php echo $product['quirktechCode']; ?></td>
         <td><?php echo $product['quirktechName']; ?></td>
         <td><?php echo $product['description']; ?></td>
