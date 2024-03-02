@@ -1,3 +1,4 @@
+<!--Fuzail Shahzad 3-1-2024 IT202-006 Phase 2 Assignment: Read SQL Data using PHP uf7@njit.edu-->
 <html>
     <head>
         <title>QuirkTech</title>
