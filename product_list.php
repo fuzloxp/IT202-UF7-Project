@@ -87,6 +87,11 @@ $statement3->closeCursor();
         <td><?php echo $product['out_of_stock']; ?></td>
         <td><?php echo $product['price']; ?></td>
         <td>
+          <form action="delete_product.php" method="post">
+            <input type="hidden" name="quirktech_ID" value="<?php echo $product['quirktechID']; ?>">
+            <input type="hidden" name="	quirktechCategory_ID" value="<?php echo $product['quirktechCategoryID']; ?>">
+            <input type="submit" value="Delete">
+          </form>
         </td>
       </tr>
       <?php endforeach; ?>      
