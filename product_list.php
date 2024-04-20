@@ -38,6 +38,27 @@ $statement3->closeCursor();
   <title>My QuirkTech Shop</title>
   <link rel="stylesheet" href=product_list.css />
   <link rel="stylesheet" href="homepage.css" />
+  <script>
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+          const submit_button_element = document.querySelectorAll("#submit_button");
+          for(let deletebutton of submit_button_element) {
+            deletebutton.addEventListener(
+            "click", (event) => {
+              const confirmDelete = confirm("Are you sure you want to delete this item?");
+              if (confirmDelete) {
+                console.log("delete confirmed");
+              } else {
+                console.log("delete canceled");
+                event.preventDefault();
+              }
+            }
+          );
+          }
+        }
+      );
+  </script>
 </head>
 
 <body class="productpagebody">
@@ -81,18 +102,21 @@ $statement3->closeCursor();
             ?>
         <?php endforeach; ?>
         </td>
-        <td><?php echo $product['quirktechCode']; ?></td>
+        <td><a href="product_details.php?product_id=<?php echo $product['quirktechID']; ?>">
+          <?php echo $product['quirktechCode']; ?></td>
         <td><?php echo $product['quirktechName']; ?></td>
         <td><?php echo $product['description']; ?></td>
         <td><?php echo $product['out_of_stock']; ?></td>
         <td><?php echo $product['price']; ?></td>
+        <?php if(isset($_SESSION['is_valid_admin'])) {?>
         <td>
-          <form action="delete_product.php" method="post">
+          <form action="delete_product.php" method="post" >
             <input type="hidden" name="quirktech_ID" value="<?php echo $product['quirktechID']; ?>">
             <input type="hidden" name="	quirktechCategory_ID" value="<?php echo $product['quirktechCategoryID']; ?>">
-            <input type="submit" value="Delete">
+            <input type="submit" value="Delete" id="submit_button">
           </form>
         </td>
+        <?php } ?>
       </tr>
       <?php endforeach; ?>      
     </table>

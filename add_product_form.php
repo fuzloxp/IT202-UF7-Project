@@ -25,7 +25,7 @@ $statement->closeCursor();
     <main>
         <h1>Add Product</h1>
         <form action="add_product.php" method="post"
-              id="add_product_form">
+              name="add_product_form" id="add_product_form">
 
             <label>Category:</label>
             <select name="category_id">
@@ -36,25 +36,37 @@ $statement->closeCursor();
             <?php endforeach; ?>
             </select><br>
             <label>Code:</label>
-            <input type="text" name="code"><br>
+            <input type="text" id="code" name="code">
+            <span>*</span>
+            <br>
+            
 
             <label>Name:</label>
-            <input type="text" name="name"><br>
+            <input type="text" id="name" name="name">
+            <span>*</span>
+            <br>
 
             <label>Description:</label>
-            <input type="text" name="description"><br>
+            <input type="text" id="description" name="description">
+            <span>*</span>
+            <br>
 
             <label>Availability:</label>
-            <input type="text" name="availability"><br>
+            <input type="text" name="availability">
+            <br>
 
             <label>List Price:</label>
-            <input type="text" name="price"><br>
+            <input type="text" id="price" name="price">
+            <span>*</span>
+            <br>
 
-            <input type="submit" value="Add Product"><br>
+            <input type="submit" value="Add Product" />
+            <input type="reset" value="Clear Form" id="reset_button" />
         </form>
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+        <script src="add_product_validation.js"></script>
         <p><a href="product_list.php">View Product List</a></p>
     </main>
-
     <footer>
         <?php include('footer.php'); ?>
     </footer>

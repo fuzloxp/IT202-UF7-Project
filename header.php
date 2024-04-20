@@ -8,9 +8,7 @@
             <?php if(isset($_SESSION['is_valid_admin'])) {?>
             <li><a href="http://localhost/uf7/git/IT202-UF7-Project/shipping.php">Shipping</a></li>
             <?php } ?>
-            <?php if(isset($_SESSION['is_valid_admin'])) {?>
             <li><a href="http://localhost/uf7/git/IT202-UF7-Project/product_list.php">Product List</a></li>
-            <?php } ?>
             <?php if(isset($_SESSION['is_valid_admin'])) {?>
             <li><a href="http://localhost/uf7/git/IT202-UF7-Project/add_product_form.php">Create Product</a></li>
             <?php } ?>
